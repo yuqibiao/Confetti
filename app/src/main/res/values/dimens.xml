@@ -1,0 +1,26 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="left_header_height">130dp</dimen>
+    <dimen name="left_header_icon_height">65dp</dimen>
+    <dimen name="left_header_icon_width">65dp</dimen>
+    <dimen name="left_header_ml">16dp</dimen>
+    <dimen name="home_item_height">100dp</dimen>
+    <dimen name="home_header_height">180dp</dimen>
+    <!--rv item-->
+    <dimen name="rv_item_1">100dp</dimen>
+    <dimen name="rv_item_2">200dp</dimen>
+    <dimen name="rv_item_3">175dp</dimen>
+    <dimen name="rv_item_4">175dp</dimen>
+
+
+    <!--text size-->
+    <dimen name="usual_ts_10">10sp</dimen>
+    <dimen name="usual_ts_12">12sp</dimen>
+    <dimen name="usual_ts_14">14sp</dimen>
+    <dimen name="usual_ts_16">16sp</dimen>
+    <dimen name="usual_ts_18">18sp</dimen>
+
+
+</resources>

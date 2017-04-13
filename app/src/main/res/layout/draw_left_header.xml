@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/left_header_height"
+    android:background="@color/myTrans"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/iv_header"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/side_nav_bar" />
+
+    <com.yyyu.baselibrary.view.RoundImageView
+        android:id="@+id/riv_icon"
+        android:layout_width="@dimen/left_header_icon_width"
+        android:layout_height="@dimen/left_header_icon_height"
+        android:layout_marginLeft="@dimen/left_header_ml"
+        android:layout_marginTop="30dp"
+        android:src="@mipmap/icon"
+        app:type="circle" />
+
+    <TextView
+        android:id="@+id/tv_username"
+        style="@style/base_tv"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="15dp"
+        android:layout_toEndOf="@+id/riv_icon"
+        android:layout_toRightOf="@+id/riv_icon"
+        android:text="点击登录"
+        android:textSize="@dimen/usual_ts_16" />
+
+    <TextView
+        android:id="@+id/tv_intro"
+        style="@style/base_tv"
+        android:layout_below="@+id/riv_icon"
+        android:layout_marginLeft="@dimen/left_header_ml"
+        android:layout_marginTop="10dp"
+        android:singleLine="true"
+        android:text="一蓑烟雨任平生"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+</RelativeLayout>

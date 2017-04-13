@@ -1,0 +1,94 @@
+apply plugin: 'com.android.application'
+
+/*新增配置*/
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+
+    defaultConfig {
+        applicationId "com.yyyu.confetti"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets{
+        main{
+            jniLibs.srcDirs= ['libs']
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/rxjava.properties'
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile project(':baselibrary')
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile 'org.greenrobot:eventbus:3.0.0'
+    /*------------------Dagger2 依赖*/
+    compile 'com.google.dagger:dagger:2.4'
+    apt 'com.google.dagger:dagger-compiler:2.4'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    /*------------------Dagger2 依赖*/
+    /*------------------ButterKnife8依赖*/
+    compile 'com.jakewharton:butterknife:8.5.1'
+    apt 'com.jakewharton:butterknife-compiler:8.5.1'
+    //8.0增加此项配置
+    /*------------------ButterKnife8依赖*/
+    /*------------------Retrofit2依赖*/
+    compile 'com.squareup.retrofit2:retrofit:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:converter-scalars:2.0.0-beta4'
+    //对Gson的支持
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    //对Rxjava的支持
+    /*------------------Retrofit2依赖*/
+    /*------------------RxJava依赖*/
+    compile 'io.reactivex:rxjava:1.0.14'
+    compile 'io.reactivex:rxandroid:1.0.1'
+    //Rxlifecycle
+    compile 'com.trello:rxlifecycle:0.3.1'
+    compile 'com.trello:rxlifecycle-components:0.3.1'
+    /*------------------RxJava依赖*/
+    /*------------------- 网络、图片*/
+    compile 'com.github.bumptech.glide:glide:3.7.0'
+    compile 'jp.wasabeef:glide-transformations:2.0.1'
+    compile 'com.squareup.okhttp3:okhttp:3.3.1'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    /*------------------- 网络、图片*/
+    /*----------------------其它*/
+    compile 'com.github.rubensousa:floatingtoolbar:1.4.4'
+    compile 'com.flyco.labelview:FlycoLabelView_Lib:1.0.2@aar'
+    compile project(':giraffeplayer')
+    compile 'org.jsoup:jsoup:1.9.2'
+    compile ('cn.bmob.android:bmob-sdk:3.5.0'){
+        exclude group: 'com.squareup.okhttp3'
+        exclude group: 'com.google.code.gson'
+        exclude group: 'io.reactivex:rxandroid'
+        exclude group: 'io.reactivex:rxjava'
+    }
+
+}

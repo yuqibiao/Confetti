@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--圆角 ImageView属性-->
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+
+    <!--ColorAbleImageView属性-->
+    <declare-styleable name="ColorAbleImageView">
+        <attr name="select_color" format="color"/>
+    </declare-styleable>
+
+    <!--FABWrapper属性-->
+    <declare-styleable name="FABWrapper">
+        <attr name="fab_menu" format="integer"/>
+    </declare-styleable>
+
+    <!--ViewPagerLooper-->
+    <declare-styleable name="ViewPageLooper">
+        <attr name="dot_normal_color" format="color"></attr>
+        <attr name="dot_selected_color" format="color"></attr>
+    </declare-styleable>
+
+    
+</resources>

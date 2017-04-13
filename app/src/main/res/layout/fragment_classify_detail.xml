@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_classify_detail"
+            style="@style/toolbar_usual"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:navigationIcon="@mipmap/ic_open"
+            app:title="@string/app_name"
+            app:titleTextColor="@color/myWhite" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tl_classify_detail"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/colorPrimary"
+            android:elevation="5dp"
+            android:fitsSystemWindows="true"
+            app:tabIndicatorColor="@color/myWhite"
+            app:tabMode="scrollable"
+            app:tabSelectedTextColor="@color/myWhite"
+            app:tabTextColor="@color/myGray" />
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_classify_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bgGray" />
+
+    </LinearLayout>
+
+    <include layout="@layout/loading"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

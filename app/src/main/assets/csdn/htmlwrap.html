@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <link href="prettify.css" type="text/css" rel="stylesheet"/>
+    <script src="prettify.js" type="text/javascript"></script>
+
+
+</head>
+
+<body>
+
+</body>
+
+
+<script type="text/javascript">
+
+    function getElements(data) {
+        var rootElement = document.body;
+        rootElement.innerHTML = data;
+    }
+
+    var imgs = document.images;
+    for (var __i = 0; __i < imgs.length; __i++) {
+        imgs[__i].onclick = function () {
+            window.csdnwebview.onClickImg(this.src);
+        }
+    }
+
+    var as = document.getElementsByTagName("a");
+    for (var __i = 0; __i < as.length; __i++) {
+        try {
+            if (as[__i].getElementsByTagName("img").length > 0) {
+                as[__i].href = "javascript:void()";
+            }
+        } catch (e) {
+        }
+    }
+
+    var codes = document.getElementsByTagName("pre");
+    for (var __i = 0; __i < codes.length; __i++) {
+        codes[__i].codeIndex = __i;
+        codes[__i].onclick = function () {
+            window.csdnwebview.onClickCode(this.innerHTML);
+        }
+        codes[__i].setAttribute("class", "prettyprint");
+
+        codes[__i].addEventListener("touchstart", function (event) {
+            var touch = event.touches[0];
+            this.touchstart_x = touch.pageX;
+            this.touchstart_y = touch.pageY;
+            window.csdnwebview.touchCode(this.codeIndex);
+
+        }, false);
+        codes[__i].addEventListener("touchmove", function (event) {
+            var touch = event.touches[0];
+            this.touchmove_x = touch.pageX;
+            this.touchmove_y = touch.pageY;
+            var _x = this.touchmove_x - this.touchstart_x;
+            var _y = this.touchmove_y - this.touchstart_y;
+            if (Math.abs(_x) > Math.abs(_y)) {
+                window.csdnwebview.preventParentTouchEvent();
+            }
+        }, false);
+    }
+
+    function touchmove(code_index, x_offset) {
+        codes[code_index].scrollLeft -= x_offset;
+    }
+
+</script>
+</html>

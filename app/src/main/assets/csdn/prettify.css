@@ -1,0 +1,197 @@
+/* Pretty printing styles. Used with prettify.js. */
+
+/* SPAN elements with the classes below are added by prettyprint. */
+.pln { color: #000 }  /* plain text */
+
+@media screen {
+  .str { color: #080 }  /* string content */
+  .kwd { color: #008 }  /* a keyword */
+  .com { color: #800 }  /* a comment */
+  .typ { color: #606 }  /* a type name */
+  .lit { color: #066 }  /* a literal value */
+  /* punctuation, lisp open bracket, lisp close bracket */
+  .pun, .opn, .clo { color: #660 }
+  .tag { color: #008 }  /* a markup tag name */
+  .atn { color: #606 }  /* a markup attribute name */
+  .atv { color: #080 }  /* a markup attribute value */
+  .dec, .var { color: #606 }  /* a declaration; a variable name */
+  .fun { color: red }  /* a function name */
+}
+
+/* Use higher contrast and text-weight for printable form. */
+@media print, projection {
+  .str { color: #060 }
+  .kwd { color: #006; font-weight: bold }
+  .com { color: #600; font-style: italic }
+  .typ { color: #404; font-weight: bold }
+  .lit { color: #044 }
+  .pun, .opn, .clo { color: #440 }
+  .tag { color: #006; font-weight: bold }
+  .atn { color: #404 }
+  .atv { color: #060 }
+}
+
+/* Put a border around prettyprinted code snippets. */
+pre.prettyprint { padding: 2px; border: 1px solid #888 }
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums { margin-top: 0; margin-bottom: 0 } /* IE indents via margin-left */
+li.L0,
+li.L1,
+li.L2,
+li.L3,
+li.L5,
+li.L6,
+li.L7,
+li.L8 { list-style-type: none }
+/* Alternate shading for lines 
+li.L1,
+li.L3,
+li.L5,
+li.L7,
+li.L9 { background: #eee }
+*/
+
+        @font-face {
+            font-family: meslolgl;
+            src: url("MesloLGL-Regular.ttf");
+        }
+
+        table {
+            width: 90% !important;
+            word-break: break-all;
+        }
+
+        td {
+            width: auto !important;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 90%;
+            margin: 5% !important;
+            font-size: 16px !important;
+            line-height: 1.5 !important;
+            color: #4A4A4A !important;
+            word-wrap: break-word;
+            text-align: left;
+        }
+
+        h1, h2, h3, h4, h5, h6, p, li, code {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p strong {
+            font-weight: normal;
+        }
+
+        i {
+            font-style: normal;
+        }
+
+        dl, dt {
+            width: 90% !important;
+            padding: 0px;
+        }
+
+        dd {
+            margin: 0px;
+        }
+
+        a, a * {
+            word-wrap: break-word;
+            text-decoration: none;
+            color: #00A5C6;
+        }
+
+        a[href="#article-comment"] {
+            display: none;
+        }
+
+        h1 {
+            font-size: 22px;
+        }
+
+        h2 {
+            font-size: 21px;
+        }
+
+        h3 {
+            font-size: 20px;
+        }
+
+        h4, h5, h6 {
+            font-size: 18px;
+        }
+
+        ul, ol {
+            text-indent: 0px !important;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        ul ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        li {
+            padding: 0px;
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            clear: both;
+            margin: auto;
+        }
+
+        textarea {
+            width: 90% !important;
+        }
+
+        pre {
+            font-family: meslolgl !important;
+            display: block;
+            font-size: 12px;
+            border: 1px solid #DCEFFE !important;
+            background-color: #EEF8FF;
+            padding: 20px 20px 10px !important;
+            background-image: url("view_code.png");
+            background-repeat: no-repeat;
+            background-position: top center;
+            background-size: 66px 17px;
+            word-wrap: normal !important;
+            overflow: auto;
+            overflow-x: scroll;
+            overflow-y: hidden;
+        }
+
+        pre::-webkit-scrollbar {
+            height: 1px;
+            background-color: #EEF8FF;
+        }
+
+        pre::-webkit-scrollbar-thumb {
+            background: #999;
+            border-radius: 1px;
+        }
+
+        pre code {
+            font-family: meslolgl !important;
+        }
+
+        blockquote {
+            padding: .5em 10px;
+            border-left: 4px solid #64B016;
+            font-size: 15px;
+            color: #9B9B9B;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+
+        blockquote p {
+            display: inline;
+        }
+

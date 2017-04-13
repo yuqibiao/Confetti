@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group >
+
+        <item
+            android:id="@+id/menu_home"
+            android:icon="@mipmap/ic_home"
+            android:checked="true"
+            android:checkable="true"
+            android:title="首页" />
+
+        <item android:title="来源">
+            <menu>
+                <item
+                    android:checkable="true"
+                    android:id="@+id/menu_gkk"
+                    android:icon="@mipmap/ic_wy"
+                    android:title="网易公开课" />
+                <item
+                    android:id="@+id/menu_zhrb"
+                    android:icon="@mipmap/ic_zhrb"
+                    android:checkable="true"
+                    android:title="知乎日报" />
+                <item
+                    android:id="@+id/menu_js"
+                    android:icon="@mipmap/ic_js"
+                    android:checkable="true"
+                    android:title="简书" />
+                <item
+                    android:id="@+id/menu_csdn"
+                    android:icon="@mipmap/ic_csdn"
+                    android:checkable="true"
+                    android:title="CSDN博客" />
+            </menu>
+
+        </item>
+
+        <item android:title="我的">
+
+            <menu>
+                <item
+                    android:id="@+id/menu_coll"
+                    android:icon="@mipmap/ic_coll"
+                    android:checkable="true"
+                    android:title="我的收藏" />
+                <item
+                    android:id="@+id/menu_download"
+                    android:icon="@mipmap/ic_download"
+                    android:checkable="true"
+                    android:title="离线缓存" />
+                <item
+                    android:id="@+id/menu_setting"
+                    android:icon="@mipmap/ic_setting"
+                    android:checkable="true"
+                    android:title="设置" />
+
+            </menu>
+        </item>
+        <group android:id="@+id/extra">
+            <item
+                android:id="@+id/menu_exit"
+                android:icon="@mipmap/ic_exit"
+                android:checkable="true"
+                android:title="退出" />
+        </group>
+
+    </group>
+</menu>

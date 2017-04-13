@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.yyyu.baselibrary.view.StereoView
+            android:id="@+id/sv_coll"
+            android:layout_width="match_parent"
+            android:layout_height="135dp"
+            android:background="@color/bgGray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/myWhite"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_to_create_folder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:drawableLeft="@mipmap/ic_add_gray"
+                        android:drawablePadding="5dp"
+                        android:textColor="@color/myYellow"
+                        android:text="新建收藏夹" />
+
+                    <TextView
+                        android:id="@+id/tv_add_coll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="确定"
+                        android:textColor="@color/colorAccent" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/et_coll_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="书签标题" />
+
+                    <EditText
+                        android:id="@+id/et_coll_url"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="文章地址" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_add"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/myWhite"
+            android:padding="16dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_to_add_coll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawableLeft="@mipmap/ic_add_gray"
+                    android:drawablePadding="5dp"
+                    android:text="添加收藏"
+                    android:textColor="@color/myYellow" />
+
+                <TextView
+                    android:id="@+id/tv_add_folder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="确定"
+                    android:textColor="@color/colorAccent" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/et_folder_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="书签标题" />
+
+                <EditText
+                    android:id="@+id/et_folder_intro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="文章地址" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </com.yyyu.baselibrary.view.StereoView>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_cate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"/>
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>

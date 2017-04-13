@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF6696</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="myWhite">#fff</color>
+    <color name="myTrans">#0000</color>
+    <color name="myGray">#e6e6e6</color>
+    <color name="myYellow">#F5A623</color>
+    <color name="imgTintColor">#A3A3A3</color>
+    <color name="bgGray">#F3F5F7</color>
+    <color name="tvGray">#686868</color>
+
+</resources>

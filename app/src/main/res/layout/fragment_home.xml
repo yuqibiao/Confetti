@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgGray">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/apl_coo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentInsetStart="0dp"
+        app:contentInsetStart="0dp"
+        android:background="@color/colorPrimary">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_home"
+            style="@style/toolbar_usual"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            app:title="@string/app_name"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:titleTextColor="@color/myWhite"
+            app:navigationIcon="@mipmap/ic_open">
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <com.yyyu.baselibrary.view.recyclerview.refresh.RefreshLayout
+        android:id="@+id/rl_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_home"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.yyyu.baselibrary.view.recyclerview.refresh.RefreshLayout>
+
+   <!-- <com.github.rubensousa.floatingtoolbar.FloatingToolbar
+        android:id="@+id/ftb_home_op"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_gravity="bottom"
+        app:floatingMenu="@menu/left_menu" />-->
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_home_op"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:src="@mipmap/plus"
+        app:layout_anchor="@id/rv_home"
+        android:padding="15dp"
+        app:layout_behavior="com.yyyu.baselibrary.anim.behavior.MyFABBehavior"
+        app:layout_anchorGravity="bottom|right" />
+
+    <include layout="@layout/loading"/>
+
+
+</android.support.design.widget.CoordinatorLayout>
+
